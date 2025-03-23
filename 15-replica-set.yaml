@@ -11,7 +11,7 @@ spec:
   replicas: 3
   selector:
     # replicaset use these labels to find the pods for creating desired number of replicas
-    matchlables:
+    matchLables:
       app: frontend
       tier: web
   # pod template
