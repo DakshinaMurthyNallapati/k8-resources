@@ -6,14 +6,15 @@ metadata:
   labels: 
     app: frontend
     tier: web
-  spec:
-  # modify replica according to your requirement
-    replicas: 3
-    selector:
+spec:
+# modify replica according to your requirement
+  replicas: 3
+  selector:
     # replicaset use these labels to find the pods for creating desired number of replicas
-      matchlables:
-        tier: frontend
-    # pod template
+    matchlables:
+      app: frontend
+      tier: web
+  # pod template
     template:
       metadata:
         labels:
