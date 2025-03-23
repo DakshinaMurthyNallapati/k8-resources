@@ -7,5 +7,5 @@ metadata:
     - name: nginx
       image: nginx
       envFrom: 
-      - configMapRef:
-          name: myconfig
+    - configMapRef:
+        name: myconfig
