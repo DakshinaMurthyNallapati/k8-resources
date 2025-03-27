@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: dakshina2025/deployment:1.0.0
+        image: dakshina2025/deployment:2.0.0
         ports:
         - containerPort: 80
 
