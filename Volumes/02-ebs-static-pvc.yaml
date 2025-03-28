@@ -7,7 +7,7 @@ spec:
   # PV name
   volumeName: ebs-static
   accessModes: 
-  - ReadWriteOnce
+    - ReadWriteOnce
   resources:
     requests:
       storage: 20Gi
