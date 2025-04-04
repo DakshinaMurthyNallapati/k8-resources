@@ -8,7 +8,7 @@ metadata:
 spec:
   ports:
   - port: 80
-    name: web
+    name: nginx
   clusterIP: None
   selector:
     app: nginx
@@ -17,7 +17,7 @@ spec:
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: web
+  name: nginx
 spec:
   selector:
     matchLabels:
@@ -38,14 +38,14 @@ spec:
         image: registry.k8s.io/nginx-slim:0.24
         ports:
         - containerPort: 80
-          name: web
+          name: nginx
         volumeMounts:
-        - name: www
+        - name: expense
           mountPath: /usr/share/nginx/html
       # instead of creating a PVC resource, you can directly provide in statfulset
   volumeClaimTemplates:
   - metadata:
-      name: www
+      name: expense
     spec:
       accessModes: [ "ReadWriteOnce" ]
       storageClassName: "ebs-sc"
