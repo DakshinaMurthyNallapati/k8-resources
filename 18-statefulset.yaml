@@ -9,12 +9,11 @@ spec:
   ports:
   - port: 80
     name: web
-  clusterIP: none
+  clusterIP: None
   selector:
     app: nginx
 
 ---
-
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
